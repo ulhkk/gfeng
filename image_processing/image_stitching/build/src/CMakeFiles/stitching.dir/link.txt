@@ -1,0 +1,2 @@
+/usr/bin/ar qc libstitching.a  CMakeFiles/stitching.dir/stitching.cpp.o
+/usr/bin/ranlib libstitching.a
