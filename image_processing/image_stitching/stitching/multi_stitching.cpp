@@ -8,8 +8,12 @@ int main(int argc, char **argv){
     std::cout<<"stitching "<<stitcher->getNum()<<" images\n";
 
     stitcher->stitch_imgs();
-
-    cv::imshow("pano",stitcher->getPano());
+    cv::Mat pano = stitcher->getPano();
+    if(!pano.data){
+        std::cout<<"failed to stitch images\n";
+        return 0;
+    }
+    cv::imshow("pano",pano);
     cv::waitKey(0);
     return 0;
 }
