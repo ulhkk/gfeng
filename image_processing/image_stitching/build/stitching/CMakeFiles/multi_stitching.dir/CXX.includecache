@@ -17,6 +17,8 @@ opencv2/stitching.hpp
 ../src/opencv2/stitching.hpp
 opencv2/core/utility.hpp
 -
+opencv2/core/cvstd.hpp
+-
 
 /home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching/multi_stitching.cpp
 stitching.h

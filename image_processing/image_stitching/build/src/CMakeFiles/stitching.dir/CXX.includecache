@@ -21,6 +21,8 @@ opencv2/stitching.hpp
 /home/gfeng/gfeng_github_ws/image_processing/image_stitching/src/opencv2/stitching.hpp
 opencv2/core/utility.hpp
 -
+opencv2/core/cvstd.hpp
+-
 
 /usr/local/include/opencv4/opencv2/./imgproc/segmentation.hpp
 opencv2/imgproc.hpp
