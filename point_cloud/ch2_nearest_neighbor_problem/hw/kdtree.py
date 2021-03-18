@@ -40,7 +40,7 @@ class Node:
 # 输出：
 #     key_sorted：排序后的键
 #     value_sorted：排序后的值
-def sort_key_by_vale(key, value):
+def sort_key_by_value(key, value):
     assert key.shape == value.shape
     assert len(key.shape) == 1
     sorted_idx = np.argsort(value)
