@@ -60,15 +60,15 @@ include stitching/CMakeFiles/multi_stitching.dir/flags.make
 stitching/CMakeFiles/multi_stitching.dir/multi_stitching.cpp.o: stitching/CMakeFiles/multi_stitching.dir/flags.make
 stitching/CMakeFiles/multi_stitching.dir/multi_stitching.cpp.o: ../stitching/multi_stitching.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object stitching/CMakeFiles/multi_stitching.dir/multi_stitching.cpp.o"
-	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/stitching && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/multi_stitching.dir/multi_stitching.cpp.o -c /home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching/multi_stitching.cpp
+	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/stitching && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/multi_stitching.dir/multi_stitching.cpp.o -c /home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching/multi_stitching.cpp
 
 stitching/CMakeFiles/multi_stitching.dir/multi_stitching.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/multi_stitching.dir/multi_stitching.cpp.i"
-	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/stitching && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching/multi_stitching.cpp > CMakeFiles/multi_stitching.dir/multi_stitching.cpp.i
+	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/stitching && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching/multi_stitching.cpp > CMakeFiles/multi_stitching.dir/multi_stitching.cpp.i
 
 stitching/CMakeFiles/multi_stitching.dir/multi_stitching.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/multi_stitching.dir/multi_stitching.cpp.s"
-	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/stitching && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching/multi_stitching.cpp -o CMakeFiles/multi_stitching.dir/multi_stitching.cpp.s
+	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/stitching && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching/multi_stitching.cpp -o CMakeFiles/multi_stitching.dir/multi_stitching.cpp.s
 
 stitching/CMakeFiles/multi_stitching.dir/multi_stitching.cpp.o.requires:
 

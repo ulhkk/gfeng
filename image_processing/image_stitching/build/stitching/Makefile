@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/gfeng/gfeng_github_ws/image_processing/image_stitching/
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -125,6 +125,48 @@ multi_stitching/fast:
 	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build && $(MAKE) -f stitching/CMakeFiles/multi_stitching.dir/build.make stitching/CMakeFiles/multi_stitching.dir/build
 .PHONY : multi_stitching/fast
 
+# Convenience name for target.
+stitching/CMakeFiles/apply_homo.dir/rule:
+	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build && $(MAKE) -f CMakeFiles/Makefile2 stitching/CMakeFiles/apply_homo.dir/rule
+.PHONY : stitching/CMakeFiles/apply_homo.dir/rule
+
+# Convenience name for target.
+apply_homo: stitching/CMakeFiles/apply_homo.dir/rule
+
+.PHONY : apply_homo
+
+# fast build rule for target.
+apply_homo/fast:
+	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build && $(MAKE) -f stitching/CMakeFiles/apply_homo.dir/build.make stitching/CMakeFiles/apply_homo.dir/build
+.PHONY : apply_homo/fast
+
+apply_homo.o: apply_homo.cpp.o
+
+.PHONY : apply_homo.o
+
+# target to build an object file
+apply_homo.cpp.o:
+	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build && $(MAKE) -f stitching/CMakeFiles/apply_homo.dir/build.make stitching/CMakeFiles/apply_homo.dir/apply_homo.cpp.o
+.PHONY : apply_homo.cpp.o
+
+apply_homo.i: apply_homo.cpp.i
+
+.PHONY : apply_homo.i
+
+# target to preprocess a source file
+apply_homo.cpp.i:
+	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build && $(MAKE) -f stitching/CMakeFiles/apply_homo.dir/build.make stitching/CMakeFiles/apply_homo.dir/apply_homo.cpp.i
+.PHONY : apply_homo.cpp.i
+
+apply_homo.s: apply_homo.cpp.s
+
+.PHONY : apply_homo.s
+
+# target to generate assembly for a file
+apply_homo.cpp.s:
+	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build && $(MAKE) -f stitching/CMakeFiles/apply_homo.dir/build.make stitching/CMakeFiles/apply_homo.dir/apply_homo.cpp.s
+.PHONY : apply_homo.cpp.s
+
 multi_stitching.o: multi_stitching.cpp.o
 
 .PHONY : multi_stitching.o
@@ -158,9 +200,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... multi_stitching"
 	@echo "... edit_cache"
+	@echo "... multi_stitching"
+	@echo "... rebuild_cache"
+	@echo "... apply_homo"
+	@echo "... apply_homo.o"
+	@echo "... apply_homo.i"
+	@echo "... apply_homo.s"
 	@echo "... multi_stitching.o"
 	@echo "... multi_stitching.i"
 	@echo "... multi_stitching.s"

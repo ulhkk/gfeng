@@ -136,6 +136,19 @@ multi_stitching/fast:
 	$(MAKE) -f stitching/CMakeFiles/multi_stitching.dir/build.make stitching/CMakeFiles/multi_stitching.dir/build
 .PHONY : multi_stitching/fast
 
+#=============================================================================
+# Target rules for targets named apply_homo
+
+# Build rule for target.
+apply_homo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 apply_homo
+.PHONY : apply_homo
+
+# fast build rule for target.
+apply_homo/fast:
+	$(MAKE) -f stitching/CMakeFiles/apply_homo.dir/build.make stitching/CMakeFiles/apply_homo.dir/build
+.PHONY : apply_homo/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -146,6 +159,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... stitching"
 	@echo "... multi_stitching"
+	@echo "... apply_homo"
 .PHONY : help
 
 

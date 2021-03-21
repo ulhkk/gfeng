@@ -14,7 +14,7 @@ endif()
 
 find_package(OpenCV)
 find_package(PCL 1.8 REQUIRED)
-find_package(Boost COMPONENTS program_options REQUIRED )
+find_package(Boost COMPONENTS program_options REQUIRED)
 
 add_definitions(${PCL_DEFINITIONS})
 

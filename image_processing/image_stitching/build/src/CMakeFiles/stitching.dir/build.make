@@ -60,15 +60,15 @@ include src/CMakeFiles/stitching.dir/flags.make
 src/CMakeFiles/stitching.dir/stitching.cpp.o: src/CMakeFiles/stitching.dir/flags.make
 src/CMakeFiles/stitching.dir/stitching.cpp.o: ../src/stitching.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/stitching.dir/stitching.cpp.o"
-	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stitching.dir/stitching.cpp.o -c /home/gfeng/gfeng_github_ws/image_processing/image_stitching/src/stitching.cpp
+	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stitching.dir/stitching.cpp.o -c /home/gfeng/gfeng_github_ws/image_processing/image_stitching/src/stitching.cpp
 
 src/CMakeFiles/stitching.dir/stitching.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stitching.dir/stitching.cpp.i"
-	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gfeng/gfeng_github_ws/image_processing/image_stitching/src/stitching.cpp > CMakeFiles/stitching.dir/stitching.cpp.i
+	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gfeng/gfeng_github_ws/image_processing/image_stitching/src/stitching.cpp > CMakeFiles/stitching.dir/stitching.cpp.i
 
 src/CMakeFiles/stitching.dir/stitching.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stitching.dir/stitching.cpp.s"
-	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gfeng/gfeng_github_ws/image_processing/image_stitching/src/stitching.cpp -o CMakeFiles/stitching.dir/stitching.cpp.s
+	cd /home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gfeng/gfeng_github_ws/image_processing/image_stitching/src/stitching.cpp -o CMakeFiles/stitching.dir/stitching.cpp.s
 
 src/CMakeFiles/stitching.dir/stitching.cpp.o.requires:
 
