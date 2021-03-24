@@ -10,7 +10,30 @@ void image_stitcher::loadImages(const std::string& path){
     return;
 }
 
+void image_stitcher::splitImages(){
 
+    cv::Rect roiLeft_;
+    roiLeft_.x = 1440;
+    roiLeft_.y = 0;
+    roiLeft_.width = imgs_[0].size().width - 1440;
+    roiLeft_.height = imgs_[0].size().height;
+    cv::Mat crop1 = imgs_[0](roiLeft_);
+    cv::imshow("crop", crop1);
+    cv::waitKey(0);
+    imgs_[0] = crop1;
+
+    cv::Rect roiRight_;
+    roiRight_.x = 0;
+    roiRight_.y = 0;
+    roiRight_.width = imgs_[1].size().width - 1440;
+    roiRight_.height = imgs_[1].size().height;
+    cv::Mat crop2 = imgs_[1](roiRight_);
+    cv::imshow("crop", crop2);
+    cv::waitKey(0);
+    imgs_[1] = crop2;
+    
+    return;
+}
 
 void image_stitcher::stitch_imgs(){
 

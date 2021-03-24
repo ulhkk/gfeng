@@ -8,6 +8,7 @@
 class image_stitcher{
 public:
     void loadImages(const std::string& path);
+    void splitImages();
     void stitch_imgs();
     int getNum();
     cv::Mat getPano();

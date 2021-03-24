@@ -75,9 +75,3 @@ void KDTree<T>::buildTree(nodePtr& curr, T* begin, T* end){
         buildTree(curr->right, mid, end);
     }
 }
-
-template<typename T>
-
-
-
-

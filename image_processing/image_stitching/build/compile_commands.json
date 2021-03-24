@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/src",
+  "command": "/usr/bin/g++-7   -isystem /usr/local/include/opencv4 -I/home/gfeng/gfeng_github_ws/image_processing/image_stitching/src -I/home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching   -Wall -Wextra -g -fopenmp -g   -std=gnu++14 -o CMakeFiles/stitching.dir/stitching.cpp.o -c /home/gfeng/gfeng_github_ws/image_processing/image_stitching/src/stitching.cpp",
+  "file": "/home/gfeng/gfeng_github_ws/image_processing/image_stitching/src/stitching.cpp"
+},
+{
+  "directory": "/home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/stitching",
+  "command": "/usr/bin/g++-7   -isystem /usr/local/include/opencv4 -I/home/gfeng/gfeng_github_ws/image_processing/image_stitching/src -I/home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching   -Wall -Wextra -g -fopenmp -g   -std=gnu++14 -o CMakeFiles/multi_stitching.dir/multi_stitching.cpp.o -c /home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching/multi_stitching.cpp",
+  "file": "/home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching/multi_stitching.cpp"
+},
+{
+  "directory": "/home/gfeng/gfeng_github_ws/image_processing/image_stitching/build/stitching",
+  "command": "/usr/bin/g++-7   -isystem /usr/local/include/opencv4 -I/home/gfeng/gfeng_github_ws/image_processing/image_stitching/src -I/home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching   -Wall -Wextra -g -fopenmp -g   -std=gnu++14 -o CMakeFiles/apply_homo.dir/apply_homo.cpp.o -c /home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching/apply_homo.cpp",
+  "file": "/home/gfeng/gfeng_github_ws/image_processing/image_stitching/stitching/apply_homo.cpp"
+}
+]
