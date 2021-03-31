@@ -63,7 +63,7 @@ class ModelNetDataset(data.Dataset):##需要从data.Dataset里继承
 
 all_path = glob.glob(r'somewhere/somewhere/somewhere/*.txt')
 cloud_data = ModelNetDataset(all_path)
-dataset = torch.utils.DataLoader(cloud_data, batch_size = 10)
+dataset = torch.utils.DataLoader(cloud_data, batch_size = 10, shuffle = True)
 
 
 ####Created by Mr.KnowHow
