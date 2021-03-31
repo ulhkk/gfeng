@@ -1,0 +1,9 @@
+###
+
+rosbag filter input.bag output.bag 't.to_sec() <= 1445541654' ##filter the rosbag according to UNIX time
+##What's UNIX time:
+
+
+
+
+###Created by Mr.KnowHow
