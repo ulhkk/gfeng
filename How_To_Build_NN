@@ -1,0 +1,26 @@
+##This file shows the basic pipeline for building a neural network in with pytorch
+
+
+from torch import nn
+
+class myNetwork(nn.Module）：
+    def __init__(self):
+        super().__init__()//super用来继承父类里init函数下所有变量和方法
+        self.layer1 = nn.Linear(20,64)###nn.conv1d or nn.conv2d各种类型的隐藏层， 参数1表示输入有多少特征（列），参数2表示本层有有多少个神经元
+        self.layer2 = nn.....(64,64)
+        ....
+        
+        self.relu = nn.ReLU()###也可以不定义直接调用nn.ReLU
+        self.sigmoid = nn.Sigmoid()
+    ###通过forward函数来将那些层的结构关联在一起组成一个网络    
+    def forward(self, input):
+        x = self.relu(self.layer1(input))
+        x = self.relu(self.layer2(x))
+        x = self.sigmoid(x)
+        return x
+    
+   
+   
+####Created by Mr.KnowHow
+        
+    
