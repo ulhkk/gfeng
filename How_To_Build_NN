@@ -2,6 +2,7 @@
 
 
 from torch import nn
+import torch.nn.funtional as F ##contains sigmoid. relu and other methods
 
 class myNetwork(nn.Module）：
     def __init__(self):
@@ -10,13 +11,13 @@ class myNetwork(nn.Module）：
         self.layer2 = nn.....(64,64)
         ....
         
-        self.relu = nn.ReLU()###也可以不定义直接调用nn.ReLU
+        self.relu = nn.ReLU()###初始化， 使用F的时候不需要初始化
         self.sigmoid = nn.Sigmoid()
     ###通过forward函数来将那些层的结构关联在一起组成一个网络    
     def forward(self, input):
-        x = self.relu(self.layer1(input))
-        x = self.relu(self.layer2(x))
-        x = self.sigmoid(x)
+        x = F.relu(self.layer1(input))
+        x = F.relu(self.layer2(x))
+        x = F.sigmoid(x)
         return x
     
    
