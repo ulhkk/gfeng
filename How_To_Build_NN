@@ -44,6 +44,19 @@ for epoch in range(num_of_epochs):
 
 
 
+###following text shows how to load data
+import torch.utils.data as data
+class ModelNetDataset(data.Dataset):##需要从data.Dataset里继承
+    def __init__(self):
+       ...
+       
+    def __getitem__(self):
+    
+    
+    def __len(self)__:
+    
+
+
 ####Created by Mr.KnowHow
         
     
