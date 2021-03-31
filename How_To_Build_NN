@@ -19,9 +19,31 @@ class myNetwork(nn.Module）：
         x = F.relu(self.layer2(x))
         x = F.sigmoid(x)
         return x
+lr = 0.00001
+def getModel():
+    model = myNetwork()
+    opt = torch.optim.Adam(model.parameters(), lr = lr) ##.parametes returns trainable parameters
+    return model, opt
     
-   
-   
+loss_fn = nn.BCELoss()   
+model, opt = getModel()
+batch_size = 64
+num_of_batches = len(data)//batch_size ##//整除
+num_of_epochs = 1000
+for epoch in range(num_of_epochs):
+    for i in range(num_of_batches):
+        X...
+        Y...
+        y_pred = model(x)
+        loss = loss_fn(y_pred - y)
+        opt.zero_grad()
+        loss.backward()
+        opt.step()
+    with torch.no_grad():
+        print('epoch: ', epoch, 'loss: ', loss_fn(model(X), Y).data.item()) ##loss returns a torch tensor, need to retreive value from it
+
+
+
 ####Created by Mr.KnowHow
         
     
