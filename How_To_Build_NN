@@ -17,7 +17,7 @@ class myNetwork(nn.Module）：
     def forward(self, input):
         x = F.relu(self.layer1(input))
         x = F.relu(self.layer2(x))
-        x = F.sigmoid(x)
+        x = F.sigmoid(x) ##crossentropy 不需要激活
         return x
 lr = 0.00001
 def getModel():
@@ -25,6 +25,10 @@ def getModel():
     opt = torch.optim.Adam(model.parameters(), lr = lr) ##.parametes returns trainable parameters
     return model, opt
     
+    
+
+##how to train net
+#loss_fn = nn.CrossEntropyLoss()
 loss_fn = nn.BCELoss()   
 model, opt = getModel()
 batch_size = 64
