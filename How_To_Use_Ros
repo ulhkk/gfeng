@@ -1,8 +1,11 @@
 ###
+roscore before running something
 
 rosbag filter input.bag output.bag 't.to_sec() <= 1445541654' ##filter the rosbag according to UNIX time
 ##What's UNIX time:
 
+rostopic echo topic_name
+rostopic list
 
 
 
