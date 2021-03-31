@@ -1,0 +1,27 @@
+###Some github commands that really come in handy when doing a project
+
+
+##How to push your changes to github
+git add .
+git commit -m 'some commitments'
+git push
+
+##How to create and change branches
+git checkout -b 'new_branch_name'
+git checkout new_branch_name   ##When doing this you need to make sure the changes you made in previous branch have been added or pushed otherwise it wont let you change branch
+
+##How to merge
+
+
+##How to check recent changes
+git status
+git diff
+git log
+
+
+##Unclear commands and keywords:
+git remote
+git origin
+
+
+###Created by Mr.KnowHow
