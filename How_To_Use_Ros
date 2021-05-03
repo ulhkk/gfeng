@@ -7,6 +7,7 @@ rosbag filter input.bag output.bag 't.to_sec() <= 1445541654' ##filter the rosba
 rostopic echo topic_name
 rostopic list
 
-
+##recording
+rosrun image_viewer video_recorder topic:=sometopic
 
 ###Created by Mr.KnowHow
