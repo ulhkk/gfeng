@@ -10,4 +10,58 @@ rostopic list
 ##recording
 rosrun image_viewer video_recorder topic:=sometopic
 
+##outputstream
+ROS_DEBUG_STREAM("something" <<something<<something);
+ROS_INFO_STREAM
+ROS_WARN_STREAM
+ROS_ERROR_STREAM
+ROS_FATAL_STREAM
+according to verbosity level, which is set inside .launch file
+e.g <arg name="verbosity" value="info"/>
+
+
+
+
+##Config template
+1.rosif file in cfg dir:
+              from rosinterface_handler.interface_generator_catkin import *
+              gen = InterfaceGenerator()
+              # Add a parameter for changing verbosity (=log level) on the fly
+              gen.add_verbosity_param(configurable=True)
+              # Your Params here
+              gen.add("overlapping_area_thresh", paramtype='int', description="Threshold for using seam carving",
+                      default=50, min=0, max=2048, configurable=True, global_scope=False)
+              # Publisher and subscriber topics
+              topic = gen.add_group("Topics")
+              topic.add("input_camera_topics", paramtype='std::vector<std::string>', description="Input camera topics",default=[],configurable=False)
+
+              # DO NOT TOUCH THIS LINE
+              #Syntax : Package, Node, Config Name(The final name will be StitchingProcessingConfig)
+              exit(gen.generate("image_stitching_ros_tool", "stitching_processing", "StitchingProcessing"))
+              
+2.in launch .launch:
+              <launch>
+                  <arg name="gpu_idx" default="0" />
+
+                  <param name="use_sim_time" value="true" />
+                  <include file="$(find calib_ros_tool)/launch/calib2tf_bertha.launch" if="$(arg publish_trafos)">
+                      <arg name="calib" value="$(arg calib_file)"/>
+                      <arg name="reference_frame" value="$(arg camera_name_0)"/>
+                  </include>
+                  <arg name="nodelet_manager_name" default="lidar_pointcloud_nodelet_manager" />
+                  <arg name="start_nodelet_manager" default="true" />
+                  <arg name="namespace" default="/sensor/lidar" />
+                  <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)" args="manager" if="$(arg start_nodelet_manager)" ns="$(arg namespace)" output="screen" />
+                  <node pkg="nodelet" type="nodelet" name="scan_converter" args="load sensor_velodyne_pointcloud_ros_tool/ScanConverterNodelet $(arg nodelet_manager_name)" ns="$(arg namespace)">
+                      <rosparam command="load" file="$(find sensor_velodyne_pointcloud_ros_tool)/launch/params/scan_converter_alpha_prime.yaml" />
+                      <param name="verbosity" value="$(arg verbosity)" />
+                  </node>
+                  <!-- Raw sensor data -->
+                  <node pkg="rosbag" type="play" name="play" output="screen" args="--pause
+                  -r $(arg rate) -s $(arg time_start) -u $(arg time_end) -d $(arg time_delay) --clock $(arg rosbag_a)"/>
+              </launch>
+3.in launch/params/.yaml:
+               param : somevalue
+
+
 ###Created by Mr.KnowHow
